@@ -1,0 +1,15 @@
+
+
+#signInButton {
+    cursor: pointer;
+    color: #0076a5;
+    padding: 14px 28px;
+    border-radius: 20px;
+    margin-top: 5%;
+    border: 1px solid #0076a5;
+    background-color: white;
+}
+
+#eeboText {
+    margin-top: 10%;
+}

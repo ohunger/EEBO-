@@ -1,12 +1,17 @@
+import "../CSSFolder/signIn.css"
 import { useState, useEffect } from "react"
 import { signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth"
 import { auth } from "../firebase/firebaseConfig"
 
 export function SignIn() {
     return (
-      <button onClick={() => signInWithPopup(auth, new GoogleAuthProvider())}>
-        Sign In
-      </button>
+      <section id="signInContainer">
+        <h2 id="eeboText">EEBO</h2>
+        <h2>A place for everything</h2>
+        <button onClick={() => signInWithPopup(auth, new GoogleAuthProvider())} id="signInButton">
+          Sign In
+         </button>
+      </section>
     )
   }
   
