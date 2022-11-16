@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  height: 100vh;
+  overflow: scroll;
 }
 
 .App-logo {
@@ -13,6 +15,29 @@
   }
 }
 
+nav{
+  height: 100%;
+  padding: 10px;
+  max-width: 200px;
+  background-color:rgb(199, 216, 255);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgb(108, 152, 255) 100%
+  );
+  text-align: center;
+  margin: 0;
+  transition: opacity 5s;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  grid-column: 1 / span 2;
+  padding: 10px 5px;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
