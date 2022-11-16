@@ -11,5 +11,22 @@
 }
 
 #eeboText {
-    margin-top: 10%;
+    padding-top: 20%;
+}
+
+#signInContainer {
+    height: 100vh;
+    background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgb(108, 152, 255) 100%
+      ); 
+}
+
+.signInText {
+    color: white;
+}
+
+#subHeadline {
+    font-family: cursive;
 }

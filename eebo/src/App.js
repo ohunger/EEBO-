@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import { useEffect, useState } from "react"
 import './App.css';
-import Nav from './Nav.js';
+import Nav from './Views/Nav.js';
 import { SignIn , SignOut, useAuthentication} from './firebase/authenticationService';
 import { HomeView } from './Views/HomeView';
 
@@ -14,13 +14,14 @@ function App() {
 
 
   return (
-    <div className="App">
-      <header>
-        {user && <button onClick={() => setWriting(true)}>New Post</button>}
-        {!user ? <SignIn /> : <SignOut/>}
-      </header>
-      {!user ? "" : <Nav posts={posts} setPost={setPost} />}
-      {!user ? <SignIn /> : <HomeView />}
+    <div className="App" id="App">
+      {user &&
+            <header>
+            {user && <button onClick={() => setWriting(true)}>New Post</button>}
+            {!user ? <SignIn /> : <SignOut/>}
+          </header>
+      }
+      {!user ? <SignIn /> :<Nav posts={posts} setPost={setPost} />}
     </div>
   );
 }

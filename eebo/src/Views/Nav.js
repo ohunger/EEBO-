@@ -1,3 +1,4 @@
+import "../CSSFolder/nav.css";
 export default function Nav({ posts, setPosts }) {
     return (
       <nav>

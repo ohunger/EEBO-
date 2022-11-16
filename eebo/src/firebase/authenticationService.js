@@ -6,8 +6,8 @@ import { auth } from "../firebase/firebaseConfig"
 export function SignIn() {
     return (
       <section id="signInContainer">
-        <h2 id="eeboText">EEBO</h2>
-        <h2>A place for everything</h2>
+        <h2 id="eeboText" class="signInText">EEBO</h2>
+        <h2 class="signInText" id="subHeadline">A place for everything</h2>
         <button onClick={() => signInWithPopup(auth, new GoogleAuthProvider())} id="signInButton">
           Sign In
          </button>
