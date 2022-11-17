@@ -4,6 +4,7 @@ import './App.css';
 import Nav from './Views/Nav.js';
 import { SignIn , SignOut, useAuthentication} from './firebase/authenticationService';
 import { HomeView } from './Views/HomeView';
+import { SearchBar } from './Views/SearchBar';
 
 function App() {
   const [posts, setPosts] = useState([])
@@ -17,7 +18,8 @@ function App() {
     <div className="App" id="App">
       {user &&
             <header>
-            {user && <button onClick={() => setWriting(true)}>New Post</button>}
+            {user && <button onClick={() => setWriting(true)} id="newPostButton">New Post</button>}
+            <SearchBar/>
             {!user ? <SignIn /> : <SignOut/>}
           </header>
       }

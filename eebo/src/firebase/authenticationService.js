@@ -19,7 +19,7 @@ export function SignIn() {
     const photoURL = auth.currentUser.photoURL
     return (
       <div>
-        <button onClick={() => signOut(auth)}>Sign Out</button>
+        <button onClick={() => signOut(auth)} id="signOutButton">Sign Out</button>
       </div>
     )
   }
