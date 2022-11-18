@@ -63,9 +63,14 @@ header {
 }
 
 #newPostButton, #signOutButton {
+  cursor: pointer;
   color: #0076a5;
   padding: 12px 26px;
   border-radius: 20px;
   background-color: white;
   border: 1px solid #0076a5;
+}
+
+#newPostForm, #signlePost {
+  margin-top: -40%;
 }
