@@ -1,4 +1,5 @@
 
+import "../CSSFolder/newPost.css";
 /**
  * view rendered when user wants to create a new post
  * @param {} param0 
@@ -6,12 +7,13 @@
  */
 export function NewPostView({addPost, cancel}) {
     return (
-        <div id="newPostForm">
-            <h2>add picture</h2>
-            <h2>add description</h2>
-            <h2>add price</h2>
-            <h2>post</h2>
-            <h2>cancel</h2>
-        </div>
+        <form id="newPostForm">
+            <input id="pictureInput" type="file" accept=".png, .jpg, .jpeg"/>
+            <input id="itemName" placeholder="item name" type="text"/>
+            <input id="description" placeholder="description" type="text"/>
+            <input id="price" placeholder="price" type="text"/>
+            <button id="postButton">Post</button>
+            <button id="cancelButton">Cancel</button>
+        </form>
     );
 }

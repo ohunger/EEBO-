@@ -1,0 +1,40 @@
+#newPostForm{
+    width: 700px;
+    height: 700px;
+    display: block;
+    margin-left: 30%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#newPostForm input {
+    margin-top: 40px;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+#description {
+    width: 450px;
+    height: 300px;
+    margin-left: 11%;
+}
+
+#itemName, #price, #pictureInput{
+    margin-left: 20%;
+}
+#itemName, #price {
+    width: 200px;
+    height: 30px;
+}
+
+#postButton, #cancelButton {
+    cursor: pointer;
+    color: #0076a5;
+    margin-left: 40%;
+    padding: 14px 28px;
+    border-radius: 20px;
+    margin-top: 5%;
+    border: 1px solid #0076a5;
+    background-color: white;
+}
