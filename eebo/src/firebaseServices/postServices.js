@@ -1,5 +1,4 @@
 const { v4: uuidv4 } = require("uuid")
-const { Article } = require("../Article/article")
 const { db, auth } = require("../firebase/firebaseConfig")
 const { firebaseConfig, articleConverter } = require("../firebase/firebaseConfig")
 const { initializeApp } = require("firebase/app")
@@ -21,8 +20,7 @@ const postsCollection = collection(db, "posts")
 
 const { useState } = require("react")
 
-
-export async function createPost({ title, price, description, postImage}) {
+export async function createPost(title, price, description, postImage) {
   // As this is just fake data for messing around, we'll throw in a quick
   // and unreliable database id. In a real app, the id should be generated
   // by the database itself (or you can use UUIDs).
@@ -47,29 +45,7 @@ export async function createPost({ title, price, description, postImage}) {
   return { id: Math.random(), title, price, description, postImage, date: new Date() }
 }
 
-export async function fetchPosts() {
-  // In storage the ids are separated from the data, but in this function
-  // we are going to combine the id and the data together.
-  const allArticles = []
-  const p = query(postsCollection, orderBy("date", "desc"))
-  const querySnapshot = await getDocs(p)
-
-  querySnapshot.forEach((doc) => {
-    const data = doc.data()
-    allArticles.push(
-      new Article(
-        doc.id,
-        data.title,
-        data.date.toDate(),
-        data.body,
-        data.userId,
-        data.author
-      )
-    )
-  })
-
-  return Object.entries(allArticles).map(([id, data]) => ({ id, ...data }))
-}
+export async function fetchPosts() {}
 
 export async function deleteArticle(postId) {
   await deleteDoc(doc(db, "posts", postId))
