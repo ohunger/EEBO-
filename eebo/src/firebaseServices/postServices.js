@@ -13,6 +13,7 @@ const {
   onSnapshot,
   orderBy,
 } = require("firebase/firestore")
+const { uploadFile } = require("../firebaseServices/uploadFilesService")
 
 // ... and do the same for other services you need
 
@@ -24,8 +25,11 @@ export async function createPost(title, price, description, postImage) {
   // As this is just fake data for messing around, we'll throw in a quick
   // and unreliable database id. In a real app, the id should be generated
   // by the database itself (or you can use UUIDs).
-
   //save nft to firebase
+
+  uploadFile(postImage)
+  return
+
   await addDoc(postsCollection, {
     id: uuidv4(),
     userId: auth.currentUser.uid,

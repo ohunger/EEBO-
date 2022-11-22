@@ -14,7 +14,7 @@ export function NewPostView({ addPost, cancel }) {
 
   function createNewPost(e) {
     e.preventDefault()
-    createPost(itemName, price, description, "url here")
+    createPost(itemName, price, description, uploadedImage)
   }
 
   return (
