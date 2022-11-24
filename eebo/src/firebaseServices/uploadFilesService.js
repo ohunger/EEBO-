@@ -11,7 +11,7 @@ const storage = getStorage()
  * @param {*} setUploadError: useState function that sets the error, if any, that
  * occured during upload
  */
-export function uploadFile(file) {
+export async function uploadFile(file) {
   console.log("file ", file)
   // Create the file metadata
   /** @type {any} */
@@ -19,8 +19,10 @@ export function uploadFile(file) {
     contentType: "image/jpeg",
   }
 
+  let id = uuidv4()
+  let imagePath = "images/" + id
   // Upload file and metadata to the object 'images/mountains.jpg'
-  const storageRef = ref(storage, "images/" + uuidv4() + "/" + file)
+  const storageRef = ref(storage, imagePath)
   const uploadTask = uploadBytesResumable(storageRef, file, metadata)
 
   // Listen for state changes, errors, and completion of the upload.
@@ -56,12 +58,7 @@ export function uploadFile(file) {
           // Unknown error occurred, inspect error.serverResponse
           break
       }
-    },
-    () => {
-      // Upload completed successfully, now we can get the download URL
-      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-        console.log("File available at", downloadURL)
-      })
     }
   )
+  return imagePath
 }
