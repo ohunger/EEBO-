@@ -10,6 +10,7 @@ export function NewPostView({ addPost, cancel }) {
   const [price, setPrice] = useState("")
   const [itemName, setItemName] = useState("")
   const [description, setDescription] = useState("")
+  const [downloadURL, setDownloadUrl] = useState("")
   const [uploadedImage, setUploadedImage] = useState()
 
   function createNewPost(e) {
