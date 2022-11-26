@@ -3,20 +3,14 @@ const { db, auth } = require("../firebase/firebaseConfig")
 const { firebaseConfig, articleConverter } = require("../firebase/firebaseConfig")
 const { initializeApp } = require("firebase/app")
 const {
-  getFirestore,
   collection,
-  getDocs,
   addDoc,
-  query,
   doc,
   deleteDoc,
-  onSnapshot,
-  orderBy,
 } = require("firebase/firestore")
 const {
   getStorage,
   ref,
-  uploadBytesResumable,
   getDownloadURL,
 } = require("firebase/storage")
 const { uploadFile } = require("../firebaseServices/uploadFilesService")
@@ -65,8 +59,6 @@ export async function createPost(title, price, description, postImage) {
 
   //return { id: Math.random(), title, price, description, postImage, date: new Date() }
 }
-
-export async function fetchPosts() {}
 
 export async function deleteArticle(postId) {
   await deleteDoc(doc(db, "posts", postId))

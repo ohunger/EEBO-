@@ -30,7 +30,7 @@ function App() {
       )}
       {!user ? <SignIn /> : <Nav posts={posts} setPost={setPost} />}
 
-      {!user ? "" : writing ? <NewPostView /> : <SinglePostView />}
+      {!user ? "" : writing ? <NewPostView /> : <HomeView />}
     </div>
   )
 }

@@ -1,8 +1,14 @@
+import { useState, useEffect } from "react"
+import { fetchAllPosts } from "../firebaseServices/queryService"
 
 export function HomeView({}) {
-    return (
-        <div>
-            <h2>Home View!</h2>
-        </div>
-    );
+  useEffect(() => {
+    fetchAllPosts()
+  }, [])
+
+  return (
+    <div>
+      <h2>Home View!</h2>
+    </div>
+  )
 }
