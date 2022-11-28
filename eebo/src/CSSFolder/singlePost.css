@@ -1,0 +1,39 @@
+#signlePostContainer {
+  width: 250px;
+  height: 400px;
+  cursor: pointer;
+  color: #0076a5;
+  padding: 14px 28px;
+  border-radius: 20px;
+  border: 1px solid #0076a5;
+  background-color: white;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+#postImage {
+  width: 307.5px;
+  height: 350px;
+  margin-top: -6%;
+  margin-left: -11.5%;
+  object-fit: cover;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 20px 20px 0px 0px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+#titleAndPrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#postTitle {
+  margin-left: -15%;
+}
+
+#postPrice {
+  margin-left: 40%;
+  margin-right: -10%;
+  color: #48f542;
+}

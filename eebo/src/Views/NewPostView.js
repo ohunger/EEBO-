@@ -6,7 +6,7 @@ import { createPost } from "../firebaseServices/postServices"
  * @param {} param0
  * @returns
  */
-export function NewPostView({ addPost, cancel }) {
+export function NewPostView({ addPost, cancel, setWritingFalse }) {
   const [price, setPrice] = useState("")
   const [itemName, setItemName] = useState("")
   const [description, setDescription] = useState("")
@@ -16,6 +16,7 @@ export function NewPostView({ addPost, cancel }) {
   function createNewPost(e) {
     e.preventDefault()
     createPost(itemName, price, description, uploadedImage)
+    setWritingFalse()
   }
 
   return (

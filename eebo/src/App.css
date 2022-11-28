@@ -15,21 +15,17 @@
   }
 }
 
-nav{
+nav {
   height: 100%;
   padding: 10px;
   max-width: 200px;
-  background-color:rgb(199, 216, 255);
+  background-color: rgb(199, 216, 255);
 }
 header {
   display: flex;
   justify-content: space-between;
   background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgb(108, 152, 255) 100%
-  );
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgb(108, 152, 255) 100%);
   text-align: center;
   margin: 0;
   transition: opacity 5s;
@@ -62,7 +58,8 @@ header {
   }
 }
 
-#newPostButton, #signOutButton {
+#newPostButton,
+#signOutButton {
   cursor: pointer;
   color: #0076a5;
   padding: 12px 26px;
@@ -71,6 +68,18 @@ header {
   border: 1px solid #0076a5;
 }
 
-#newPostForm, #signlePost {
+#newPostForm,
+#signlePost {
   margin-top: -50%;
+}
+
+#homeViewContainer {
+  height: 100%;
+  max-width: 80%;
+  margin-left: 18%;
+  margin-top: -55%;
+  cursor: pointer;
+  color: #0076a5;
+  padding: 14px 28px;
+  background-color: white;
 }

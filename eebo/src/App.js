@@ -15,6 +15,10 @@ function App() {
 
   const user = useAuthentication()
 
+  function setWritingFalse() {
+    setWriting(false)
+  }
+
   return (
     <div className="App" id="App">
       {user && (
