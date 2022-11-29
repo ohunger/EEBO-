@@ -1,3 +1,4 @@
+import "../CSSFolder/homeView.css"
 import { useState, useEffect } from "react"
 import { fetchAllPosts } from "../firebaseServices/queryService"
 import { SinglePostView } from "./SinglePostView"
@@ -9,11 +10,11 @@ export function HomeView({}) {
   }, [])
 
   return (
-    <div id="homeViewContainer">
+    <div id="homeViewContainer" className="grid">
       {posts.length === 0 ? (
         <h2>No Posts Yet</h2>
       ) : (
-        posts.map((post) => <SinglePostView key={post.id} {...post} />)
+        posts.map((post) => <SinglePostView key={post.id} {...post} className="col" />)
       )}
     </div>
   )

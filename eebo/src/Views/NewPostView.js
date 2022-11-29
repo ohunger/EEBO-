@@ -13,9 +13,9 @@ export function NewPostView({ addPost, cancel, setWritingFalse }) {
   const [downloadURL, setDownloadUrl] = useState("")
   const [uploadedImage, setUploadedImage] = useState()
 
-  function createNewPost(e) {
+  async function createNewPost(e) {
     e.preventDefault()
-    createPost(itemName, price, description, uploadedImage)
+    await createPost(itemName, price, description, uploadedImage)
     setWritingFalse()
   }
 
