@@ -25,7 +25,7 @@ export function NewPostView({ addPost, cancel, setWritingFalse }) {
         id="pictureInput"
         type="file"
         accept=".png, .jpg, .jpeg"
-        onChange={(e) => setUploadedImage(e.target.value)}
+        onChange={(e) => setUploadedImage(e.target.files[0])}
       />
       <input
         id="itemName"
