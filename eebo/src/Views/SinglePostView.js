@@ -1,3 +1,4 @@
+import { Post } from "../Classes/post"
 import "../CSSFolder/singlePost.css"
 import { auth } from "../firebase/firebaseConfig"
 /**
@@ -14,9 +15,17 @@ export function SinglePostView({
   title,
   userId,
   userName,
+  goToPage,
+  changePostForDetails,
 }) {
+  function setPageDetails() {
+    changePostForDetails(
+      new Post(id, datePosted, description, postImage, price, title, userId, userName)
+    )
+    goToPage("details")
+  }
   return (
-    <section id="signlePostContainer">
+    <section id="signlePostContainer" onClick={setPageDetails}>
       <img src={postImage} id="postImage" />
       <div id="titleAndPrice">
         <h2 id="postTitle">{title}</h2>

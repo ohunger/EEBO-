@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import { fetchAllPosts } from "../firebaseServices/queryService"
 import { SinglePostView } from "./SinglePostView"
 
-export function HomeView({}) {
+export function HomeView({ goToPage, changePostForDetails }) {
   const [posts, setPosts] = useState([])
   useEffect(() => {
     fetchAllPosts().then(setPosts)
@@ -14,7 +14,15 @@ export function HomeView({}) {
       {posts.length === 0 ? (
         <h2>No Posts Yet</h2>
       ) : (
-        posts.map((post) => <SinglePostView key={post.id} {...post} className="col" />)
+        posts.map((post) => (
+          <SinglePostView
+            key={post.id}
+            {...post}
+            className="col"
+            goToPage={goToPage}
+            changePostForDetails={changePostForDetails}
+          />
+        ))
       )}
     </div>
   )
