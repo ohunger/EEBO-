@@ -12,16 +12,26 @@ export function DetailsView({ goToPage, postForDetails }) {
   return (
     <div class="container">
       <div class="toppane">
-        <h2>{postForDetails.title}</h2>
-        <button onClick={setPageToHome}>Back</button>
+        <h2 id="postTitle">{postForDetails.title}</h2>
+        <button onClick={setPageToHome} id="backButton">
+          Back
+        </button>
       </div>
       <div class="leftpane">
-        <img src={postForDetails.postImage} id="postImage" />
-        <button>Buy ${postForDetails.price}</button>
+        <img src={postForDetails.postImage} id="image" />
+        <button id="buyButton">Buy ${postForDetails.price}</button>
       </div>
-      <div class="middlepane">{postForDetails.description}</div>
+      <div class="middlepane">
+        <h2>Description</h2>
+        <article>{postForDetails.description}</article>
+      </div>
       <div class="rightpane">
-        <h1>Will show uber and google maps</h1>
+        <div id="googleMapsWidget">
+          <h1>google maps will show here</h1>
+        </div>
+        <div id="uberWidget">
+          <h1>uber will show here</h1>
+        </div>
       </div>
     </div>
   )
