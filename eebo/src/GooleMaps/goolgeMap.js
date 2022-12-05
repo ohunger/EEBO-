@@ -6,6 +6,7 @@ export function MapContainer({ postTitle, latitude, longitude }) {
   const mapStyles = {
     height: "50vh",
     width: "100%",
+    borderRadius: "20px",
   }
 
   const postLocation = {
