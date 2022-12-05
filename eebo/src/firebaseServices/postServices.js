@@ -2,17 +2,8 @@ const { v4: uuidv4 } = require("uuid")
 const { db, auth } = require("../firebase/firebaseConfig")
 const { firebaseConfig, articleConverter } = require("../firebase/firebaseConfig")
 const { initializeApp } = require("firebase/app")
-const {
-  collection,
-  addDoc,
-  doc,
-  deleteDoc,
-} = require("firebase/firestore")
-const {
-  getStorage,
-  ref,
-  getDownloadURL,
-} = require("firebase/storage")
+const { collection, addDoc, doc, deleteDoc } = require("firebase/firestore")
+const { getStorage, ref, getDownloadURL } = require("firebase/storage")
 const { uploadFile } = require("../firebaseServices/uploadFilesService")
 
 // ... and do the same for other services you need
@@ -22,7 +13,14 @@ const postsCollection = collection(db, "posts")
 
 const { useState } = require("react")
 
-export async function createPost(title, price, description, postImage) {
+export async function createPost(
+  title,
+  price,
+  description,
+  postImage,
+  latitude,
+  longitude
+) {
   // As this is just fake data for messing around, we'll throw in a quick
   // and unreliable database id. In a real app, the id should be generated
   // by the database itself (or you can use UUIDs).
@@ -43,6 +41,8 @@ export async function createPost(title, price, description, postImage) {
         description: description,
         postImage: url,
         date: new Date(),
+        latatitude: latitude,
+        longitude: longitude,
       })
         .then(function (docRef) {
           console.log("new doc " + docRef.id)

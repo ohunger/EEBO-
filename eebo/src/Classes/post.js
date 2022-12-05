@@ -1,5 +1,16 @@
 export class Post {
-  constructor(id, datePosted, description, postImage, price, title, userId, userName) {
+  constructor(
+    id,
+    datePosted,
+    description,
+    postImage,
+    price,
+    title,
+    userId,
+    userName,
+    latitude,
+    longitude
+  ) {
     this.id = id
     this.datePosted = datePosted
     this.description = description
@@ -8,6 +19,8 @@ export class Post {
     this.title = title
     this.userId = userId
     this.userName = userName
+    this.latitude = latitude
+    this.longitude = longitude
   }
 
   toString() {

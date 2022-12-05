@@ -15,12 +15,25 @@ export function SinglePostView({
   title,
   userId,
   userName,
+  latitude,
+  longitude,
   goToPage,
   changePostForDetails,
 }) {
   function setPageDetails() {
     changePostForDetails(
-      new Post(id, datePosted, description, postImage, price, title, userId, userName)
+      new Post(
+        id,
+        datePosted,
+        description,
+        postImage,
+        price,
+        title,
+        userId,
+        userName,
+        latitude,
+        longitude
+      )
     )
     goToPage("details")
   }

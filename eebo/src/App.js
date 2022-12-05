@@ -8,6 +8,7 @@ import { SearchBar } from "./Views/SearchBar"
 import { NewPostView } from "./Views/NewPostView"
 import { SinglePostView } from "./Views/SinglePostView"
 import { DetailsView } from "./Views/DetailsView"
+import { MapContainer } from "./GooleMaps/goolgeMap"
 
 function App() {
   const [posts, setPosts] = useState([])
@@ -61,6 +62,8 @@ function App() {
         <DetailsView goToPage={goToPage} postForDetails={postForDetails} />
       </div>
     )
+  } else if (page === "map") {
+    return <MapContainer />
   }
 }
 

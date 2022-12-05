@@ -15,7 +15,7 @@ export function NewPostView({ addPost, cancel, setWritingFalse }) {
 
   async function createNewPost(e) {
     e.preventDefault()
-    await createPost(itemName, price, description, uploadedImage)
+    await createPost(itemName, price, description, uploadedImage, 33.97097, 118.41492)
     setWritingFalse()
   }
 

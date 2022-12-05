@@ -1,4 +1,5 @@
 import "../CSSFolder/details.css"
+import { MapContainer } from "../GooleMaps/goolgeMap"
 
 /**
  * View shows details about a post
@@ -27,7 +28,11 @@ export function DetailsView({ goToPage, postForDetails }) {
       </div>
       <div class="rightpane">
         <div id="googleMapsWidget">
-          <h1>google maps will show here</h1>
+          <MapContainer
+            postTitle={postForDetails.title}
+            latitude={postForDetails.latitude}
+            longitude={postForDetails.longitude}
+          />
         </div>
         <div id="uberWidget">
           <h1>uber will show here</h1>
