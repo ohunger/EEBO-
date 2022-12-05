@@ -1,4 +1,5 @@
 import { React, useState } from "react"
+import { config } from "../config"
 import { GoogleMap, LoadScript, Marker, InfoWindow } from "@react-google-maps/api"
 
 export function MapContainer({ postTitle, latitude, longitude }) {
@@ -22,7 +23,7 @@ export function MapContainer({ postTitle, latitude, longitude }) {
   }
 
   return (
-    <LoadScript googleMapsApiKey="AIzaSyCa1tGEne5TA_U1ILd3sYSrhH9K95V3Pes">
+    <LoadScript googleMapsApiKey={config.googleMapsApIKey}>
       <GoogleMap mapContainerStyle={mapStyles} zoom={13} center={postLocation.location}>
         <Marker
           key={postLocation.name}
