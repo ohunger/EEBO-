@@ -1,3 +1,5 @@
+import { Post } from "../Classes/post"
+
 const { v4: uuidv4 } = require("uuid")
 const { db, auth } = require("../firebase/firebaseConfig")
 const { firebaseConfig, articleConverter } = require("../firebase/firebaseConfig")
@@ -25,7 +27,6 @@ export async function createPost(
   // and unreliable database id. In a real app, the id should be generated
   // by the database itself (or you can use UUIDs).
   //save nft to firebase
-
   let imagePath = await uploadFile(postImage)
   //delay until image is registered in firebase
   await new Promise((resolve) => setTimeout(resolve, 10000))
@@ -41,7 +42,7 @@ export async function createPost(
         description: description,
         postImage: url,
         date: new Date(),
-        latatitude: latitude,
+        latitude: latitude,
         longitude: longitude,
       })
         .then(function (docRef) {
@@ -57,7 +58,7 @@ export async function createPost(
       alert("error occured saving image: " + error)
     })
 
-  //return { id: Math.random(), title, price, description, postImage, date: new Date() }
+  return { id: Math.random(), title, price, description, postImage, date: new Date() }
 }
 
 export async function deleteArticle(postId) {

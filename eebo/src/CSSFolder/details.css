@@ -5,7 +5,7 @@ html {
   margin: 0;
 }
 
-#EEBOtitle{
+#EEBOtitle {
   color: white;
   font-size: 40px;
   font-weight: bold;
@@ -47,12 +47,7 @@ html {
   justify-content: center;
   border-collapse: collapse;
   margin-bottom: 10px;
-  background: linear-gradient(
-        90deg,
-        rgb(108, 152, 255) 0%,
-        rgba(2, 0, 36, 1) 100%
-        
-      ); 
+  background: linear-gradient(90deg, rgb(108, 152, 255) 0%, rgba(2, 0, 36, 1) 100%);
 }
 
 .rightpane {
@@ -65,13 +60,12 @@ html {
   margin-right: 5px;
 }
 
-
-
 #image {
   width: 70%;
   height: 70%;
   margin-left: 5%;
   object-fit: cover;
+  border-radius: 20px;
 }
 
 #postTitle {

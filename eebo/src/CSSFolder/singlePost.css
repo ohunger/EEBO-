@@ -9,6 +9,7 @@
   background-color: white;
   margin-left: 2%;
   margin-top: 2%;
+  overflow: hidden;
 }
 
 #postImage {
@@ -37,4 +38,3 @@
   margin-right: -10%;
   color: #48f542;
 }
-

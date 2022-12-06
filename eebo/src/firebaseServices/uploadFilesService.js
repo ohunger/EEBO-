@@ -12,7 +12,6 @@ const storage = getStorage()
  * occured during upload
  */
 export async function uploadFile(file) {
-  console.log("file ", file)
   // Create the file metadata
   /** @type {any} */
   const metadata = {

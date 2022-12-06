@@ -23,7 +23,6 @@ export async function fetchAllPosts() {
   querySnapshot.forEach((doc) => {
     // doc.data() is never undefined for query doc snapshots
     let data = doc.data()
-    console.log("data " + data.longitude)
     allPosts.push(
       new Post(
         doc.id,
