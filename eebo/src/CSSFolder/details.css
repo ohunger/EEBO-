@@ -34,7 +34,7 @@ html {
 }
 
 .middlepane {
-  width: 30%;
+  width: 35%;
   float: left;
   height: 100%;
   border-collapse: collapse;
@@ -61,7 +61,8 @@ html {
   float: right;
   position: relative;
   border-collapse: collapse;
-  margin-top: 40px;
+  margin-top: 25px;
+  margin-right: 5px;
 }
 
 
