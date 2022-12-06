@@ -33,15 +33,6 @@ html {
   height: 100%;
   border-collapse: collapse;
 }
-
-.rightpane {
-  width: 30%;
-  height: 100%;
-  float: right;
-  position: relative;
-  border-collapse: collapse;
-}
-
 .toppane {
   width: 100%;
   height: 100px;
@@ -49,15 +40,34 @@ html {
   align-items: center;
   justify-content: center;
   border-collapse: collapse;
+  padding: 10px;
+  background: linear-gradient(
+        90deg,
+        rgb(108, 152, 255) 0%,
+        rgba(2, 0, 36, 1) 100%
+        
+      ); 
 }
 
+.rightpane {
+  width: 30%;
+  height: 100%;
+  float: right;
+  position: relative;
+  /*border-collapse: collapse;*/
+}
+
+
+
 #image {
+  
   width: 70%;
   height: 70%;
   margin-top: 5%;
   margin-left: 5%;
   object-fit: cover;
-  border-radius: 20px;
+  
+  
 }
 
 #postTitle {
