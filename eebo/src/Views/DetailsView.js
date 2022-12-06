@@ -18,12 +18,13 @@ export function DetailsView({ goToPage, postForDetails }) {
   return (
     <div class="container">
       <div class="toppane">
-        <h2 id="postTitle">{postForDetails.title}</h2>
+      <h2 id="EEBOtitle">EEBO Market</h2>
         <button onClick={setPageToHome} id="backButton">
           Back
         </button>
       </div>
       <div class="leftpane">
+        <h2 id="postTitle">{postForDetails.title}</h2>
         <img src={postForDetails.postImage} id="image" />
         <button id="buyButton">Buy ${postForDetails.price}</button>
       </div>
