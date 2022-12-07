@@ -10,7 +10,12 @@
   margin-left: 2%;
   margin-top: 2%;
   overflow: hidden;
-  
+  height:90%;
+  transition: transform 0.2s;
+  -webkit-transition: transform 0.2s;
+}
+#signlePostContainer:hover {
+  transform: scale(1.05);
 }
 
 #postImage {
@@ -23,6 +28,7 @@
   -webkit-border-radius: 20px 20px 0px 0px;
   border-radius: 20px 20px 0px 0px;
 }
+
 
 #titleAndPrice {
   display: flex;
