@@ -58,6 +58,7 @@ header {
   }
 }
 
+
 #newPostButton,
 #signOutButton {
   cursor: pointer;
@@ -68,7 +69,9 @@ header {
   border: 1px solid #0076a5;
 }
 
+
 #newPostForm,
 #signlePost {
-  margin-top: -50%;
+  overflow: scroll;
 }
+
