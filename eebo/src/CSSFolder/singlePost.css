@@ -13,6 +13,8 @@
   height:90%;
   transition: transform 0.2s;
   -webkit-transition: transform 0.2s;
+  cursor:pointer;
+  
 }
 #signlePostContainer:hover {
   transform: scale(1.05);
@@ -27,6 +29,7 @@
   -moz-border-radius: 0px;
   -webkit-border-radius: 20px 20px 0px 0px;
   border-radius: 20px 20px 0px 0px;
+  
 }
 
 
@@ -35,6 +38,7 @@
   flex-direction: row;
   font-size: 15px;
   justify-content: flex-start;
+  
 }
 
 #postTitle {
