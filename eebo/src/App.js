@@ -41,18 +41,23 @@ function App() {
                 New Post
               </button>
             )}
-            <SearchBar />
+            <SearchBar posts={posts} setPosts={setPosts} />
             {!user ? <SignIn /> : <SignOut />}
           </header>
         )}
-        {!user ? <SignIn /> : <Nav posts={posts} setPost={setPost} />}
+        {!user ? <SignIn /> : <Nav />}
 
         {!user ? (
           ""
         ) : writing ? (
           <NewPostView setWritingFalse={setWritingFalse} />
         ) : (
-          <HomeView goToPage={goToPage} changePostForDetails={changePostForDetails} />
+          <HomeView
+            goToPage={goToPage}
+            changePostForDetails={changePostForDetails}
+            posts={posts}
+            setPosts={setPosts}
+          />
         )}
       </div>
     )

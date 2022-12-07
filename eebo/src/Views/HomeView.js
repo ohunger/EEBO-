@@ -3,8 +3,7 @@ import { useState, useEffect } from "react"
 import { fetchAllPosts } from "../firebaseServices/queryService"
 import { SinglePostView } from "./SinglePostView"
 
-export function HomeView({ goToPage, changePostForDetails }) {
-  const [posts, setPosts] = useState([])
+export function HomeView({ goToPage, changePostForDetails, posts, setPosts }) {
   useEffect(() => {
     fetchAllPosts().then(setPosts)
   }, [])
