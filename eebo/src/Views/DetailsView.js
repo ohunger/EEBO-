@@ -1,4 +1,5 @@
 import "../CSSFolder/details.css"
+import {useState} from 'react';
 import { MapContainer } from "../GooleMaps/goolgeMap"
 
 /**
@@ -6,6 +7,7 @@ import { MapContainer } from "../GooleMaps/goolgeMap"
  */
 
 export function DetailsView({ goToPage, postForDetails }) {
+  const [buttonText, setButtonText] = useState('Buy $'+ postForDetails.price);
   function setPageToHome() {
     goToPage("home")
   }
@@ -29,6 +31,14 @@ export function DetailsView({ goToPage, postForDetails }) {
       alert("enable location to use uber services")
     }
   }
+  function handleClick() {
+    setButtonText('Bought!');
+    setTimeout(() => {
+      setButtonText('Buy $'+ postForDetails.price);
+      }, 1500);
+      
+
+  }
 
   return (
     <div class="container">
@@ -41,7 +51,7 @@ export function DetailsView({ goToPage, postForDetails }) {
       <div class="leftpane">
         <h2 id="postTitle">{postForDetails.title}</h2>
         <img src={postForDetails.postImage} id="image" />
-        <button id="buyButton">Buy ${postForDetails.price}</button>
+        <button onClick ={handleClick} id="buyButton">{buttonText}</button>
       </div>
       <div class="middlepane">
         <h2>Description</h2>
