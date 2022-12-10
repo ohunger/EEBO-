@@ -20,6 +20,7 @@ nav {
   padding: 10px;
   max-width: 200px;
   background-color: rgb(199, 216, 255);
+  position: static;
 }
 header {
   display: flex;
@@ -43,6 +44,7 @@ header {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: static;
 }
 
 .App-link {
