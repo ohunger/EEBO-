@@ -58,6 +58,7 @@ export function NewPostView({ addPost, cancel, setWritingFalse }) {
   } else {
     return (
       <form id="newPostForm" onSubmit={createNewPost}>
+        
         <input
           id="pictureInput"
           type="file"
@@ -75,6 +76,8 @@ export function NewPostView({ addPost, cancel, setWritingFalse }) {
         <input
           id="description"
           placeholder="description"
+          multiline={true} // ios fix for centering it at the top-left corner 
+numberOfLines={10}
           type="text"
           onChange={(e) => setDescription(e.target.value)}
           required
@@ -93,10 +96,12 @@ export function NewPostView({ addPost, cancel, setWritingFalse }) {
           onChange={(e) => setAddress(e.target.value)}
           required
         />
-        <button id="postButton">Post</button>
-        <button id="cancelButton" onClick={cancelPosting}>
-          Cancel
-        </button>
+        <div id="buttons">
+          <button id="postButton">Post</button>
+          <button id="cancelButton" onClick={cancelPosting}>
+            Cancel
+          </button>
+        </div>
       </form>
     )
   }

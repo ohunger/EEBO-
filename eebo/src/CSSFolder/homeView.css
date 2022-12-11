@@ -1,16 +1,17 @@
 #homeViewContainer {
   height: 90%;
   max-width: 100%;
-  margin-left: 15%;
-  margin-top: -56%;
   cursor: pointer;
   color: #0076a5;
   padding: 10px 10px;
   background-color: white;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* grid-auto-rows: 50%; */
-  grid-auto-rows: 45%;
-  grid-gap: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
   overflow: scroll;
+  justify-content: space-evenly;
+}
+#SinglePostView{
+  height: 400px;
 }
