@@ -73,11 +73,11 @@ export function NewPostView({ addPost, cancel, setWritingFalse }) {
           onChange={(e) => setItemName(e.target.value)}
           required
         />
-        <input
+        <textarea
           id="description"
           placeholder="description"
-          multiline={true} // ios fix for centering it at the top-left corner 
-numberOfLines={10}
+          rows = {8}
+          cols = {200}
           type="text"
           onChange={(e) => setDescription(e.target.value)}
           required
@@ -89,9 +89,11 @@ numberOfLines={10}
           onChange={(e) => setPrice(e.target.value)}
           required
         />
-        <input
+        <textarea
           id="pickupAddress"
           placeholder="pickup address e.g 1 LMU Drive, 90045, CA"
+          rows = {5}
+          cols = {200}
           type="text"
           onChange={(e) => setAddress(e.target.value)}
           required
