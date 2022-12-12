@@ -23,7 +23,6 @@ html {
   border-collapse: collapse;
 }
 
-
 #buyButton,
 #backButton {
   cursor: pointer;
@@ -32,7 +31,7 @@ html {
   border-radius: 20px;
   border: 1.2px solid #0076a5;
   background-color: rgb(255, 255, 255);
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .middlepane {
@@ -40,7 +39,11 @@ html {
   float: left;
   height: 100%;
   border-collapse: collapse;
-  background-image: linear-gradient( 180deg, rgb(238, 247, 252) 26.8% , rgb(215, 243, 237) 64%);
+  background-image: linear-gradient(
+    180deg,
+    rgb(238, 247, 252) 26.8%,
+    rgb(215, 243, 237) 64%
+  );
   -webkit-border-radius: 30px 30px 30px 30px;
   border-radius: 30px 30px 30px 30px;
 }
@@ -59,7 +62,7 @@ html {
   width: 30%;
   height: 100%;
   float: right;
-  position:relative;
+  position: relative;
   border-collapse: collapse;
   margin-top: 25px;
   margin-right: 10px;
@@ -78,24 +81,23 @@ html {
   width: 85%;
 }
 
-
 #postTitle {
   margin-left: 5%;
 }
 
 #backButton {
   margin-left: 70%;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 #googleMapsWidget {
-  color:grey;
+  color: grey;
   width: 100%;
   height: 50%;
   margin-top: -5%;
-  border-radius:20px;
+  border-radius: 20px;
   background-size: 100%;
-  background-image: url('https://www.icegif.com/wp-content/uploads/loading-icegif.gif');
+  background-image: url("https://www.icegif.com/wp-content/uploads/loading-icegif.gif");
   border: 1px solid #0076a5;
 }
 
@@ -106,17 +108,15 @@ html {
   border-radius: 20px;
   background: black;
   border: 1px solid #0076a5;
-  background-image: url('https://i0.wp.com/uberlyftdrivers.com/wp-content/uploads/2019/05/madsuqf4hfbq3bhyzu3nukwl4q.gif?fit=1400%2C758&ssl=1');
+  background-image: url("https://i0.wp.com/uberlyftdrivers.com/wp-content/uploads/2019/05/madsuqf4hfbq3bhyzu3nukwl4q.gif?fit=1400%2C758&ssl=1");
   background-repeat: no-repeat;
   transition: height 0.6s;
   -webkit-transition: height 0.6s;
-  cursor:pointer;
+  cursor: pointer;
 }
 #uberWidget:hover {
   height: 50%;
 }
-
-
 
 #buyButton {
   color: #100a31;
@@ -125,11 +125,8 @@ html {
   margin-left: 10%;
 }
 
-
 #useUberText {
   margin-top: 25%;
   color: white;
   text-shadow: 0px 0px 40px #052d30;
 }
-
-

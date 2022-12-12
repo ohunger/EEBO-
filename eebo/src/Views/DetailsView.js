@@ -20,7 +20,6 @@ export function DetailsView({ goToPage, postForDetails }) {
           const userLongitude = position.coords.longitude
           const uberUrl = `https://m.uber.com/ul/?client_id=<CLIENT_ID>&action=setPickup&pickup[latitude]=${userLatitude}&pickup[longitude]=${userLongitude}&pickup[nickname]=Me&pickup[formatted_address]=1455%20Market%20St%2C%20San%20Francisco%2C%20CA%2094103&dropoff[latitude]=${postForDetails.latitude}&dropoff[longitude]=${postForDetails.longitude}&dropoff[nickname]=${postForDetails.title}&dropoff[formatted_address]=1%20Telegraph%20Hill%20Blvd%2C%20San%20Francisco%2C%20CA%2094133&product_id=a1111c8c-c720-46c3-8534-2fcdd730040d`
           window.open(uberUrl, "_blank", "noopener,noreferrer")
-          console.log(position)
         },
         function (error) {
           alert("error occured " + error.message)
