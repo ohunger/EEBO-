@@ -4,12 +4,12 @@
 **EEBO** is a marketplace designed for college students to trade or give away items to other college students. 
 The app was built to have functionalities including posting, implementation of apis for mapping/location, and searchable posts to name a few!
 
-## The app has different pages including:
+## The app hosts pages including:
 
-  * _Homeview_: posts, newPostButton, sign out are accessible here
-  * _DetailsView_: info page for individual posts, picture, description, GoogleMapsWidget, Uber hyperlink, backbutton
-  * _NewPostView_: page meant for creating new posts, uploading photo, description, location etc
-  * _StartPage_: welcome page with google login
+  * **Homeview**: posts, newPostButton, sign out are accessible here
+  * **DetailsView**: info page for individual posts, picture, description, GoogleMapsWidget, Uber hyperlink, backbutton
+  * **NewPostView**: page meant for creating new posts, uploading photo, description, location etc
+  * **StartPage**: welcome page with google login
   
 ## Homeview in depth (HomeView.js):
   * this page serves as the main hub for the entire app
