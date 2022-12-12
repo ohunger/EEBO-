@@ -11,7 +11,7 @@ The app was built to have functionalities including posting, implementation of a
   * _NewPostView_: page meant for creating new posts, uploading photo, description, location etc
   * _StartPage_: welcome page with google login
   
-* ### Homeview in depth:
+ ### Homeview in depth:
   * this page serves as the main hub for the entire app
   * it includes all the current posts in a flex format
   * each post in homeview shows the photo associated with thus post, a title (ex: Apple Watch), and price
