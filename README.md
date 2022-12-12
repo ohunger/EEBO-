@@ -18,7 +18,7 @@ The app was built to have functionalities including posting, implementation of a
   * each individual post "cover" code is hosted in SinglePostView.js
   * Homeview also contains some nice css additions including a expanding animation on hover over each "singepost" and some stubborn flex and other spacing codeblocks that took a lot of trial and error even though it looks quite simple
 
-## Detailsview in depth (DeatilsView.js):
+## Detailsview in depth (DetailsView.js):
   * when you click on a individual post this page appears displaying the data of each post
   * it is organized into 3 panes: left, middle, right
   * leftpane contains the image associated with post and has a simple hover animation in css, borders etc. / also has a buy/bought button
