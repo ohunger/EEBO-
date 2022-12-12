@@ -33,7 +33,7 @@ The app was built to have functionalities including posting, implementation of a
   * takes in info like Geocode location(address), picutreInput(file), description, and price
   * hosts two buttons, postButton and cancelButton
 
-## API Functionality (goolgeMap.js etc ...akwardly mispelled):
+## API Functionality (goolgeMap.js etc ...akwardly misspelled):
   * imports googlemap, loadscript, info window, markerF from @react-google-maps/api
   * API key is not hosted locally at this moment, right now the key is literally just in the code but we will change upon deployment
   * in general this google map widget takes latitude and longitude to show a small block of maps, and has code for markers onClick
