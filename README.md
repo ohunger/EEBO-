@@ -33,3 +33,16 @@ The app was built to have functionalities including posting, implementation of a
   * takes in info like Geocode location(address), picutreInput(file), description, and price
   * hosts two buttons, postButton and cancelButton
 
+#### other .js files
+  * App.js, primary js file where everything connects together and all the other files are imported into
+  * LoadingIndicator.js : loading indicator
+  * Nav.js : meant to be the left pane navigation panel in HomeView high likelihood of scrapping
+  * SearchBar.js : code for the search bar in homeview, works as intended
+  * SinglePostView.js, code for the brief image,title,price view of each post in homeview
+
+#### CSS
+  * lots of little css details, most stuff is displayed using a flex/grid layout
+  * posts are neatly displayed in boxes with borders and soft corners, with simple and readable colors, linear gradients where it makes sense
+  * a primary theme of blue, very subtle gradients in description boxes etc
+  * heavy focus on spacing, more difficult to line everything up than expected
+  * chose to display most items on a pixel basis and not percentages, so that when the window is minimized the items do not shrink in an unwanted way, but rather the flex should wrap or make items closer
