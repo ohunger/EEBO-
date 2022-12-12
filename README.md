@@ -40,12 +40,14 @@ The app was built to have functionalities including posting, implementation of a
 
   * imports geocode module to newPostView to add address.
 
-### other .js files
+### Other .js files
   * App.js, primary js file where everything connects together and all the other files are imported into
   * LoadingIndicator.js : loading indicator
   * Nav.js : meant to be the left pane navigation panel in HomeView high likelihood of scrapping
   * SearchBar.js : code for the search bar in homeview, works as intended
   * SinglePostView.js, code for the brief image,title,price view of each post in homeview
+  * goolgeMap.js as explained above
+  * post.js : where data is stored, includes items like id, datePosted, description etc.
 
 ### CSS
   * lots of little css details, most stuff is displayed using a flex/grid layout
@@ -53,4 +55,11 @@ The app was built to have functionalities including posting, implementation of a
   * a primary theme of blue, very subtle gradients in description boxes etc
   * heavy focus on spacing, more difficult to line everything up than expected
   * chose to display most items on a pixel basis and not percentages, so that when the window is minimized the items do not shrink in an unwanted way, but rather the flex should wrap or make items closer
+
+### Other Notes:
+  * files are neatly organized into folders, like CSSFolder, Views(where most js files are hosted), firebase etc.
+  * The project was more advanced than we thought, some parts are not yet implemented. We had intended to implement messaging or commenting since we are obviously not allowed to add real purchasing elements, but the load of the other tasks was too heavy
+  * lot of trial and error especially with googlemapswidget and general css stuff, spacing, sizing, and debugging overlapping
+  * even with alot of css work put in, it struggles to work when minimized.
+  
 
