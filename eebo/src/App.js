@@ -45,7 +45,7 @@ function App() {
             {!user ? <SignIn /> : <SignOut />}
           </header>
         )}
-        
+        {!user ? <SignIn /> : ""}
 
         {!user ? (
           ""
