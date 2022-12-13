@@ -99,7 +99,7 @@ export function NewPostView({ addPost, cancel, setWritingFalse }) {
           required
         />
         <div id="buttons">
-          <button id="postButton">Post</button>
+          <button id="postButton" onClick={setWritingFalse}>Post</button>
           <button id="cancelButton" onClick={cancelPosting}>
             Cancel
           </button>
