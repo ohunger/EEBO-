@@ -1,6 +1,12 @@
 import { React, useState } from "react"
 //import { config } from "../config"
-import { GoogleMap, LoadScript, InfoWindow, MarkerF } from "@react-google-maps/api"
+import {
+  GoogleMap,
+  LoadScript,
+  InfoWindow,
+  MarkerF,
+  useJsApiLoader,
+} from "@react-google-maps/api"
 
 export function MapContainer({ postTitle, latitude, longitude }) {
   const mapStyles = {
@@ -19,12 +25,18 @@ export function MapContainer({ postTitle, latitude, longitude }) {
 
   const [selected, setSelected] = useState({})
 
+  const { isLoaded } = useJsApiLoader({
+    id: "google-map-script",
+    googleMapsApiKey: "AIzaSyCa1tGEne5TA_U1ILd3sYSrhH9K95V3Pes",
+    libraries: ["geometry", "drawing"],
+  })
+
   function seletItem(item) {
     setSelected(item)
   }
 
-  return (
-    <LoadScript googleMapsApiKey="AIzaSyCa1tGEne5TA_U1ILd3sYSrhH9K95V3Pes">
+  if (isLoaded) {
+    return (
       <GoogleMap mapContainerStyle={mapStyles} zoom={13} center={postLocation.location}>
         <MarkerF
           key={postLocation.name}
@@ -42,6 +54,28 @@ export function MapContainer({ postTitle, latitude, longitude }) {
           </InfoWindow>
         )}
       </GoogleMap>
-    </LoadScript>
-  )
+    )
+  } else {
+    return (
+      <LoadScript googleMapsApiKey="AIzaSyCa1tGEne5TA_U1ILd3sYSrhH9K95V3Pes">
+        <GoogleMap mapContainerStyle={mapStyles} zoom={13} center={postLocation.location}>
+          <MarkerF
+            key={postLocation.name}
+            position={postLocation.location}
+            onClick={() => seletItem(postLocation)}
+          />
+
+          {selected.location && (
+            <InfoWindow
+              position={selected.location}
+              clickable={true}
+              onCloseClick={() => setSelected({})}
+            >
+              <p>{selected.name}</p>
+            </InfoWindow>
+          )}
+        </GoogleMap>
+      </LoadScript>
+    )
+  }
 }
