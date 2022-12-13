@@ -34,6 +34,10 @@ export function NewPostView({ addPost, cancel, setWritingFalse }) {
 
   async function createNewPost(e) {
     e.preventDefault()
+    if (checkForEmptyField) {
+      alert("fill in all fields")
+      return
+    }
     setPromiseInProgress(true)
     await Geocode.fromAddress(address).then(
       async (response) => {
@@ -44,8 +48,18 @@ export function NewPostView({ addPost, cancel, setWritingFalse }) {
         console.error(error)
       }
     )
-    setWritingFalse()
     setPromiseInProgress(false)
+    setWritingFalse()
+  }
+
+  function checkForEmptyField() {
+    return (
+      price === "" ||
+      address === "" ||
+      itemName === "" ||
+      description === "" ||
+      uploadedImage === null
+    )
   }
 
   function cancelPosting(e) {
@@ -58,7 +72,6 @@ export function NewPostView({ addPost, cancel, setWritingFalse }) {
   } else {
     return (
       <form id="newPostForm" onSubmit={createNewPost}>
-        
         <input
           id="pictureInput"
           type="file"
@@ -76,8 +89,8 @@ export function NewPostView({ addPost, cancel, setWritingFalse }) {
         <textarea
           id="description"
           placeholder="description"
-          rows = {8}
-          cols = {200}
+          rows={8}
+          cols={200}
           type="text"
           onChange={(e) => setDescription(e.target.value)}
           required
@@ -92,14 +105,16 @@ export function NewPostView({ addPost, cancel, setWritingFalse }) {
         <textarea
           id="pickupAddress"
           placeholder="pickup address e.g 1 LMU Drive, 90045, CA"
-          rows = {5}
-          cols = {200}
+          rows={5}
+          cols={200}
           type="text"
           onChange={(e) => setAddress(e.target.value)}
           required
         />
         <div id="buttons">
-          <button id="postButton" onClick={setWritingFalse}>Post</button>
+          <button id="postButton" onClick={createNewPost}>
+            Post
+          </button>
           <button id="cancelButton" onClick={cancelPosting}>
             Cancel
           </button>

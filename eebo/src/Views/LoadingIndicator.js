@@ -8,7 +8,7 @@ export function LoadingIndicator({}) {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        marginTop: "-30%",
+        marginTop: "30%",
         marginLeft: "10%",
       }}
     >
