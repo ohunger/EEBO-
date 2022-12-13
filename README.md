@@ -46,7 +46,7 @@ The app was built to have functionalities including posting, implementation of a
   * App.js, primary js file where everything connects together and all the other files are imported into
   * LoadingIndicator.js : loading indicator
   * Nav.js : meant to be the left pane navigation panel in HomeView high likelihood of scrapping
-  * SearchBar.js : code for the search bar in homeview, works as intended
+  * SearchBar.js : code for the search bar in homeview
   * SinglePostView.js, code for the brief image,title,price view of each post in homeview
   * goolgeMap.js as explained above
   * post.js : where data is stored, includes items like id, datePosted, description etc.
