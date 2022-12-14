@@ -1,8 +1,7 @@
 import "../CSSFolder/newPost.css"
 import Geocode from "react-geocode"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { LoadingIndicator } from "./LoadingIndicator"
-import { trackPromise } from "react-promise-tracker"
 import { createPost } from "../firebaseServices/postServices"
 /**
  * view rendered when user wants to create a new post
@@ -14,7 +13,6 @@ export function NewPostView({ addPost, cancel, setWritingFalse }) {
   const [address, setAddress] = useState("")
   const [itemName, setItemName] = useState("")
   const [description, setDescription] = useState("")
-  const [downloadURL, setDownloadUrl] = useState("")
   const [uploadedImage, setUploadedImage] = useState()
   const [promiseInProgress, setPromiseInProgress] = useState(false)
 
@@ -34,7 +32,8 @@ export function NewPostView({ addPost, cancel, setWritingFalse }) {
 
   async function createNewPost(e) {
     e.preventDefault()
-    if (checkForEmptyField) {
+    let anyFieldEmpty = checkForEmptyField()
+    if (anyFieldEmpty) {
       alert("fill in all fields")
       return
     }
@@ -54,10 +53,10 @@ export function NewPostView({ addPost, cancel, setWritingFalse }) {
 
   function checkForEmptyField() {
     return (
-      price === "" ||
-      address === "" ||
-      itemName === "" ||
-      description === "" ||
+      price.length === 0 ||
+      address.length === 0 ||
+      itemName.length === 0 ||
+      description.length === 0 ||
       uploadedImage === null
     )
   }

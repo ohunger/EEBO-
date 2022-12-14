@@ -2,8 +2,6 @@ import { Post } from "../Classes/post"
 
 const { v4: uuidv4 } = require("uuid")
 const { db, auth } = require("../firebase/firebaseConfig")
-const { firebaseConfig, articleConverter } = require("../firebase/firebaseConfig")
-const { initializeApp } = require("firebase/app")
 const { collection, addDoc, doc, deleteDoc } = require("firebase/firestore")
 const { getStorage, ref, getDownloadURL } = require("firebase/storage")
 const { uploadFile } = require("../firebaseServices/uploadFilesService")
@@ -12,8 +10,6 @@ const { uploadFile } = require("../firebaseServices/uploadFilesService")
 
 const storage = getStorage()
 const postsCollection = collection(db, "posts")
-
-const { useState } = require("react")
 
 export async function createPost(
   title,

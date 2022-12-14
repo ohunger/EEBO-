@@ -1,5 +1,5 @@
 import "../CSSFolder/homeView.css"
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import { fetchAllPosts } from "../firebaseServices/queryService"
 import { SinglePostView } from "./SinglePostView"
 

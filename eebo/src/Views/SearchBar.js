@@ -15,10 +15,6 @@ export function SearchBar({ posts, setPosts }) {
     }
   }, [query])
 
-  function searchForUserQuery() {}
-
-  //onClick={searchForUserQuery}
-
   return (
     <form id="searchForm">
       <input

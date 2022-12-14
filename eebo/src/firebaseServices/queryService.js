@@ -1,17 +1,7 @@
 import { Post } from "../Classes/post"
 
 const { db } = require("../firebase/firebaseConfig")
-const {
-  getFirestore,
-  collection,
-  getDocs,
-  query,
-  doc,
-  deleteDoc,
-  onSnapshot,
-  orderBy,
-  where,
-} = require("firebase/firestore")
+const { collection, getDocs, query, where } = require("firebase/firestore")
 
 const POSTS_COLLECTION_NAME = "posts"
 

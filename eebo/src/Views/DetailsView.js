@@ -1,5 +1,5 @@
 import "../CSSFolder/details.css"
-import {useState} from 'react';
+import { useState } from "react"
 import { MapContainer } from "../GooleMaps/goolgeMap"
 
 /**
@@ -7,7 +7,7 @@ import { MapContainer } from "../GooleMaps/goolgeMap"
  */
 
 export function DetailsView({ goToPage, postForDetails }) {
-  const [buttonText, setButtonText] = useState('Buy $'+ postForDetails.price);
+  const [buttonText, setButtonText] = useState("Buy $" + postForDetails.price)
   function setPageToHome() {
     goToPage("home")
   }
@@ -31,12 +31,10 @@ export function DetailsView({ goToPage, postForDetails }) {
     }
   }
   function handleClick() {
-    setButtonText('Bought!');
+    setButtonText("Bought!")
     setTimeout(() => {
-      setButtonText('Buy $'+ postForDetails.price);
-      }, 1500);
-      
-
+      setButtonText("Buy $" + postForDetails.price)
+    }, 1500)
   }
 
   return (
@@ -49,8 +47,10 @@ export function DetailsView({ goToPage, postForDetails }) {
       </div>
       <div class="leftpane">
         <h2 id="postTitle">{postForDetails.title}</h2>
-        <img src={postForDetails.postImage} id="image" />
-        <button onClick ={handleClick} id="buyButton">{buttonText}</button>
+        <img src={postForDetails.postImage} id="image" alt="post" />
+        <button onClick={handleClick} id="buyButton">
+          {buttonText}
+        </button>
       </div>
       <div class="middlepane">
         <h2>Description</h2>

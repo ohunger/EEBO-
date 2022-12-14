@@ -1,6 +1,5 @@
 import { Post } from "../Classes/post"
 import "../CSSFolder/singlePost.css"
-import { auth } from "../firebase/firebaseConfig"
 /**
  * rendered to show a single post item
  * @param {} param0
@@ -39,7 +38,7 @@ export function SinglePostView({
   }
   return (
     <section id="signlePostContainer" onClick={setPageDetails}>
-      <img src={postImage} id="postImage" />
+      <img src={postImage} id="postImage" alt="single post" />
       <div id="titleAndPrice">
         <h2 id="postTitle">{title}</h2>
         <h2 id="postPrice">${price}</h2>

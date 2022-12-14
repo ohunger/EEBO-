@@ -1,6 +1,5 @@
-import { useState } from "react"
 import { v4 as uuidv4 } from "uuid"
-import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage"
+import { getStorage, ref, uploadBytesResumable } from "firebase/storage"
 
 const storage = getStorage()
 
