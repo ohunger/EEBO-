@@ -2,7 +2,7 @@
 
 _Evan, Evan, Betram, Owen_
 
-https://eebo-c2acf.web.app/
+LINK TO WEBAPP: https://eebo-c2acf.web.app/
 
 **EEBO** is a marketplace designed for college students to trade or give away items to other college students.
 The app was built to have functionalities including posting, implementation of apis for mapping/location, and searchable posts to name a few!
